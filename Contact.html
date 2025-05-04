@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shivaya HR - Your trusted recruitment partner in IT, Non-IT, Technical and Non-Technical hiring." />
+  <meta name="keywords" content="Recruitment, IT hiring, Technical hiring, Shivaya HR" />
+  <meta name="author" content="Shivaya HR" />
+  <title>Shivaya HR - Empowering Businesses with Top Talent</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVJyr1tqAfL2Qn3w81wOg/DbapKwKZNHk+8cKn4VpoM62aT4xyk4a1r7O8ivToExT3iYcN9ZC1RM+M8SGm2AcA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    .navbar-brand img {
+      height: 40px;
+    }
+  
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #e63a59;
+    }
+    .about-img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .about-banner {
+  background-color: #e63a59;
+  padding: 100px 50px;
+  border-bottom: 1px solid #dbe1e7;
+}
+
+.about-banner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-banner-subtitle {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+    .service-card {
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.service-icon i {
+  color: #e63a59;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+.mv-section {
+  background-color: #fdf0f3;
+  padding: 60px 20px;
+}
+
+.mv-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+}
+
+.mv-icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+h1, h2, h3,h4,h5 {
+      font-family: 'Playfair Display', serif;
+      color: #e63a59;
+    }
+.mv-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #e63a59;
+}
+
+.mv-body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+.our-approach-section {
+  background-color: #fef2f4;
+  font-family: 'Poppins', sans-serif;
+}
+
+.step-card {
+  flex: 1;
+}
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-arrows {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.custom-arrows li::before {
+  content: "→";
+  color: #e63a59;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.step-box {
+  background-color: #fff;
+  border-left: 5px solid #e63a59;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+}
+
+.step-box h5 {
+  font-size: 1.8rem;
+  color: #e63a59;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.step-box h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.step-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.section {
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .highlight {
+      background: #fdf0f3;
+      padding: 70px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+    }
+    .process-circle-lg {
+  background-color: #e63a59;
+  color: #fff;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.process-circle-lg:hover {
+  transform: translateY(-6px);
+}
+
+.process-circle-lg h6 {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  color: #fff;
+}
+.industry-card {
+  border: 1px solid #ffd6dd;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.industry-card:hover {
+  background: #ffe9ee;
+  border-color: #e63a59;
+  transform: translateY(-5px);
+}
+
+.industry-card h5 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.industry-card p {
+  font-family: 'Poppins', sans-serif;
+}
+
+input.form-control, textarea.form-control {
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+label.form-label {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+button.btn-danger {
+  background-color: #e63a59;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+button.btn-danger:hover {
+  background-color: #b7253d;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="shivayahr.png" alt="Shivaya HR Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="IT-Recruitment.html">IT Recruitment</a></li>
+              <li><a class="dropdown-item" href="NonIT-Recruitment.html">Non-IT Recruitment</a></li>
+              <li><a class="dropdown-item" href="TechnicalHiring.html">Technical Hiring</a></li>
+              <li><a class="dropdown-item" href="NonTechnicalHiring.html">Non-Technical Hiring</a></li>
+    
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Information Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Faq.html">FAQ's</a></li>
+              <li><a class="dropdown-item" href="Careers.html">Career Opportunities</a></li>
+              <li><a class="dropdown-item" href="IndustriesWeServe.html">Industries we serve</a></li>
+              <li><a class="dropdown-item" href="TermsandConditions.html">Terms & Conditions</a></li>
+              <li><a class="dropdown-item" href="Privacy-Policy.html">Privacy Policy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- About Page Banner -->
+<section class="about-banner">
+    <div class="container text-center">
+      <h2 class="about-banner-title">Contact Us – Get in Touch with Shivaya HR
+    </h2>
+      <p class="about-banner-subtitle">Looking for the Right Talent? Let’s Connect!
+    </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="highlight">
+        <p>At Shivaya HR, we are committed to helping businesses find the best talent for their workforce. Whether you need IT, Non-IT, Technical, or Non-Technical professionals, our team is here to assist you with customized recruitment solutions that meet your business needs.
+        </p>
+        <p>Fill out the form below or reach out to us directly, and one of our recruitment specialists will get back to you soon.</p>
+      </div>
+    </div>
+  </section>
+  <section class="py-5" style="background-color: #fdf0f3;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="font-family: 'Playfair Display', serif; color: #e63a59;">Get in Touch</h2>
+      <p class="text-center mb-5" style="font-family: 'Poppins', sans-serif; color: #555;">
+        Fill out the form below or reach out directly — our recruitment specialists will respond promptly.
+      </p>
+  
+      <div class="row g-4">
+        <!-- Contact Info -->
+        <div class="col-md-5">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="mb-3 text-danger">Contact Information</h5>
+            <p><i class="fas fa-map-marker-alt me-2 text-danger"></i> B9, First floor, Sector 2, Noida, 201301</p>
+            <p><i class="fas fa-envelope me-2 text-danger"></i> info@shivayahr.com</p>
+            <p><i class="fas fa-phone me-2 text-danger"></i> 72908 74357</p>
+            <p><i class="fas fa-clock me-2 text-danger"></i> Mon – Fri | 9:00 AM – 6:00 PM</p>
+  
+            <hr class="my-4" />
+            <h6 class="text-danger">Why Work with Shivaya HR?</h6><br>
+            <ul class="small ps-3" style="font-family: 'Poppins', sans-serif;">
+              <li>✅ Fast & Efficient Hiring Process</li><br>
+              <li>✅ Industry-Specific Expertise</li><br>
+              <li>✅ Tailored Hiring Solutions</li><br>
+              <li>✅ Access to a Large Talent Pool</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Contact Form -->
+        <div class="col-md-7">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="mb-3 text-danger">Send Us a Message</h5>
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your full name" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" placeholder="Company or Organization" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Your email address" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="Your phone number" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Hiring Requirement Details</label>
+                <textarea class="form-control" rows="4" placeholder="Job roles, industry, special needs..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-danger w-100 fw-bold">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Footer -->
+  <footer class="text-white" style="
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://img.freepik.com/premium-vector/corporate-website-service-careers-registration-page-menu-bar-design-corporate-website_566886-4037.jpg?ga=GA1.1.589108472.1744450308&semt=ais_hybrid&w=740') center/cover no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+">
+  <div class="container py-5">
+    <div class="row gy-5 justify-content-between">
+      <!-- Column 1: About -->
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">Shivaya HR</h5>
+        <p class="small text-white-50">
+          Empowering businesses with top talent through tailored recruitment solutions. We deliver quality, speed, and alignment.
+        </p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-md-2">
+        <h6 class="fw-semibold mb-3">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="text-white-50 text-decoration-none d-block mb-1">Home</a></li>
+          <li><a href="about.html" class="text-white-50 text-decoration-none d-block mb-1">About Us</a></li>
+          <li><a href="Careers.html" class="text-white-50 text-decoration-none d-block mb-1">Careers</a></li>
+          <li><a href="Faq.html" class="text-white-50 text-decoration-none d-block mb-1">Faq's</a></li>
+
+          <li><a href="TermsandConditions.html" class="text-white-50 text-decoration-none d-block mb-1">Terms and Conditions</a></li>
+          <li><a href="Privacy-Policy.html" class="text-white-50 text-decoration-none d-block">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">Contact Info</h6>
+        <p class="small text-white-50 mb-1">B9, First Floor, Sector 2, Noida, 201301</p>
+        <p class="small text-white-50 mb-1">
+          Email: <a href="mailto:info@shivayahr.com" class="text-white text-decoration-none">info@shivayahr.com</a>
+        </p>
+        <p class="small text-white-50">
+          Phone: <a href="tel:+917290874357" class="text-white text-decoration-none">72908 74357</a>
+        </p>
+      </div>
+
+      <!-- Column 4: Subscribe -->
+      <div class="col-md-4">
+        <h6 class="fw-semibold mb-3">Subscribe for Updates</h6>
+        <form>
+          <div class="input-group">
+            <input type="email" class="form-control rounded-0" placeholder="Enter your email" />
+            <button class="btn btn-danger rounded-0" type="submit">Subscribe</button>
+          </div>
+        </form>
+        <small class="d-block mt-2 text-white-50">Stay informed with our latest hiring insights.</small>
+      </div>
+    </div>
+
+    <hr class="border-top border-secondary my-4" />
+
+    <div class="text-center small text-white-50">
+      © 2025 Shivaya HR. All rights reserved.
+    </div>
+  </div>
+</footer>
+  
+  
+    
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
