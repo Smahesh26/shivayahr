@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVJyr1tqAfL2Qn3w81wOg/DbapKwKZNHk+8cKn4VpoM62aT4xyk4a1r7O8ivToExT3iYcN9ZC1RM+M8SGm2AcA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
 
   <style>
     body {
@@ -22,14 +25,25 @@
       height: 40px;
     }
     .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://img.freepik.com/free-vector/office-interior-open-space-flat-design-vector-illustration-businessmen-talking-modern-meeting-room-conference-hall_126523-3102.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://img.freepik.com/premium-vector/job-interview-woman-having-job-interview-man-talking-young-woman-job-interview_566886-12160.jpg?uid=R89578248&ga=GA1.1.1852512966.1745664887&semt=ais_hybrid&w=740') center/cover no-repeat;
       height: 100vh;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.2s ease-out forwards;
+  animation-delay: 0.1s;
     }
+    
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     .hero-section h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
@@ -46,7 +60,23 @@
       max-width: 100%;
       border-radius: 12px;
     }
- 
+    .service-box {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.service-box:nth-child(1) { animation-delay: 0.5s; }
+.service-box:nth-child(2) { animation-delay: 0.7s; }
+.service-box:nth-child(3) { animation-delay: 0.9s; }
+.service-box:nth-child(4) { animation-delay: 0.11s; }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
   </style>
@@ -93,22 +123,23 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <h1>Empowering Businesses with Top Talent</h1>
-      <p>Your trusted partner in IT, Non-IT, Technical, and Non-Technical hiring.</p>
-      <a href="#contact" class="btn btn-danger px-4 py-2 mt-3">Find the Right Talent Today</a>
+  <section class="hero-section animate__animated animate__fadeInUp">
+    <div class="container text-center">
+      <h1 class="animate__animated animate__fadeInDown animate__delay-1s">Empowering Businesses with Top Talent</h1>
+      <p class="animate__animated animate__fadeInUp animate__delay-1s">Your trusted partner in IT, Non-IT, Technical, and Non-Technical hiring.</p>
+      <a href="Contact.html" class="btn btn-danger px-4 py-2 mt-3 animate__animated animate__zoomIn animate__delay-1s">Find the Right Talent Today</a>
     </div>
   </section>
+  
 
   <!-- About Section -->
   <section id="about">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="https://img.freepik.com/free-vector/man-having-online-job-interview_52683-43379.jpg" alt="About Shivaya HR" class="about-img">
+        <div class="col-md-6 animate__animated animate__fadeInLeft animate__delay-1s">
+          <img src="https://img.freepik.com/free-vector/man-having-online-job-interview_52683-43379.jpg" alt="About Shivaya HR" class="about-img img-fluid">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 animate__animated animate__fadeInRight animate__delay-2s">
           <h2 class="section-title mb-3">About Shivaya HR</h2>
           <p>At Shivaya HR, we specialize in delivering tailored recruitment solutions. Whether you need IT specialists, technical experts, or business professionals, we ensure each hire fits your goals and culture.</p>
          <p>Our team of experienced recruiters understands that hiring isn’t just about filling positions; it’s about building strong, high-performing teams that drive business success. That’s why we focus on a customized, client-centric approach, ensuring each candidate we place aligns with your company culture, goals, and long-term vision.
@@ -129,45 +160,46 @@
     <div class="container text-center">
       <p class="text-uppercase small mb-1" style="letter-spacing: 1px; font-family: 'Poppins', sans-serif; color: #e63a59;">Services</p>
       <h2 class="mb-5" style="font-family: 'Playfair Display', serif; color: #2c3e50;">Our Features & Services</h2>
+      
       <div class="row g-4 justify-content-center">
         
         <!-- IT Recruitment -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
           <div class="service-box p-4 bg-white rounded-4 shadow-sm h-100 text-center">
             <img src="https://cdn-icons-png.flaticon.com/512/9068/9068953.png" alt="IT Recruitment" class="mb-3" style="height: 70px;" />
             <h5 class="fw-bold mb-2">IT Recruitment</h5>
             <p class="text-muted small">Find and hire top IT professionals including developers, cloud engineers & security experts.</p>
-            <a href="#contact" class="btn btn-outline-danger btn-sm px-4">MORE</a>
+            <a href="IT-Recruitment.html" class="btn btn-outline-danger btn-sm px-4">MORE</a>
           </div>
         </div>
   
         <!-- Non-IT Recruitment -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
           <div class="service-box p-4 bg-white rounded-4 shadow-sm h-100 text-center">
             <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Non-IT Recruitment" class="mb-3" style="height: 70px;" />
             <h5 class="fw-bold mb-2">Non-IT Recruitment</h5>
             <p class="text-muted small">We source candidates for sales, marketing, HR, finance and other business roles.</p>
-            <a href="#contact" class="btn btn-outline-danger btn-sm px-4">MORE</a>
+            <a href="NonIT-Recruitment.html" class="btn btn-outline-danger btn-sm px-4">MORE</a>
           </div>
         </div>
   
         <!-- Technical Hiring -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
           <div class="service-box p-4 bg-white rounded-4 shadow-sm h-100 text-center">
             <img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Technical Hiring" class="mb-3" style="height: 70px;" />
             <h5 class="fw-bold mb-2">Technical Hiring</h5>
             <p class="text-muted small">We hire engineers, designers & consultants across automotive, electronics, and more.</p>
-            <a href="#contact" class="btn btn-outline-danger btn-sm px-4">MORE</a>
+            <a href="TechnicalHiring.html" class="btn btn-outline-danger btn-sm px-4">MORE</a>
           </div>
         </div>
   
         <!-- Non-Technical Hiring -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
           <div class="service-box p-4 bg-white rounded-4 shadow-sm h-100 text-center">
             <img src="https://cdn-icons-png.flaticon.com/512/3094/3094837.png" alt="Non-Technical Hiring" class="mb-3" style="height: 70px;" />
             <h5 class="fw-bold mb-2">Non-Technical Hiring</h5>
             <p class="text-muted small">We provide recruitment solutions for admin, support, and managerial roles.</p>
-            <a href="#contact" class="btn btn-outline-danger btn-sm px-4">MORE</a>
+            <a href="NonTechnicalHiring.html" class="btn btn-outline-danger btn-sm px-4">MORE</a>
           </div>
         </div>
   
@@ -178,49 +210,48 @@
   
     <!-- Why Choose Shivaya HR -->
     <section class="py-5 bg-light" id="why-choose-us">
-        <div class="container">
-          <div class="row align-items-center gy-4">
-            <!-- Image Column -->
-            <div class="col-md-5">
-              <img src="https://img.freepik.com/premium-vector/human-resources-specialist-concept-idea-recruitment-job-management-hr-manager-interviewing-job-candidate-flat-vector-illustration_613284-2708.jpg?ga=GA1.1.589108472.1744450308&semt=ais_hybrid&w=740" 
-                   alt="Why Choose Shivaya HR" 
-                   class="img-fluid rounded-3 shadow-sm" 
-                   style="height: 100%; object-fit: cover;" />
-            </div>
-      
-            <!-- Text Column -->
-              <!-- Content -->
-      <div class="col-md-7 ps-md-5">
-        <!-- <p class="text-danger text-uppercase small fw-bold mb-1" style="font-family: 'Poppins', sans-serif;">Why Choose Us</p> -->
-        <h3 class="section-title mb-4" style="font-family: 'Playfair Display', serif;">Why Choose Shivaya HR?</h3>
-
-        <ul class="list-unstyled" style="font-family: 'Poppins', sans-serif; font-size: 1rem;">
-          <li class="d-flex align-items-start mb-3">
-            <i class="fas fa-briefcase me-3 text-danger fs-5"></i>
-            <span><strong>Industry Expertise</strong> – Years of experience in hiring across multiple domains.</span>
-          </li>
-          <li class="d-flex align-items-start mb-3">
-            <i class="fas fa-sliders-h me-3 text-danger fs-5"></i>
-            <span><strong>Customized Hiring Strategies</strong> – Every business is different, and so is our approach.</span>
-          </li>
-          <li class="d-flex align-items-start mb-3">
-            <i class="fas fa-users me-3 text-danger fs-5"></i>
-            <span><strong>Access to a Wide Talent Pool</strong> – Our extensive network helps us find the right fit faster.</span>
-          </li>
-          <li class="d-flex align-items-start mb-3">
-            <i class="fas fa-check-circle me-3 text-danger fs-5"></i>
-            <span><strong>Efficient & Transparent Process</strong> – We ensure a smooth, hassle-free hiring experience.</span>
-          </li>
-          <li class="d-flex align-items-start mb-3">
-            <i class="fas fa-handshake me-3 text-danger fs-5"></i>
-            <span><strong>Long-Term Partnerships</strong> – We don’t just place candidates; we help you build strong teams.</span>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="row align-items-center gy-4">
+    
+          <!-- Image Column -->
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="https://img.freepik.com/premium-vector/human-resources-specialist-concept-idea-recruitment-job-management-hr-manager-interviewing-job-candidate-flat-vector-illustration_613284-2708.jpg?ga=GA1.1.589108472.1744450308&semt=ais_hybrid&w=740" 
+                 alt="Why Choose Shivaya HR" 
+                 class="img-fluid rounded-3 shadow-sm" 
+                 style="height: 100%; object-fit: cover;" />
+          </div>
+    
+          <!-- Text Column -->
+          <div class="col-md-7 ps-md-5" data-aos="fade-left">
+            <h3 class="section-title mb-4" style="font-family: 'Playfair Display', serif;">Why Choose Shivaya HR?</h3>
+    
+            <ul class="list-unstyled" style="font-family: 'Poppins', sans-serif; font-size: 1rem;">
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-briefcase me-3 text-danger fs-5"></i>
+                <span><strong>Industry Expertise</strong> – Years of experience in hiring across multiple domains.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-sliders-h me-3 text-danger fs-5"></i>
+                <span><strong>Customized Hiring Strategies</strong> – Every business is different, and so is our approach.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-users me-3 text-danger fs-5"></i>
+                <span><strong>Access to a Wide Talent Pool</strong> – Our extensive network helps us find the right fit faster.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-check-circle me-3 text-danger fs-5"></i>
+                <span><strong>Efficient & Transparent Process</strong> – We ensure a smooth, hassle-free hiring experience.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-handshake me-3 text-danger fs-5"></i>
+                <span><strong>Long-Term Partnerships</strong> – We don’t just place candidates; we help you build strong teams.</span>
+              </li>
+            </ul>
+          </div>
+    
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-  
+    </section>
   
   <!-- Client Testimonials with Carousel -->
   
@@ -270,7 +301,7 @@
       <p class="mb-4" style="font-family: 'Poppins', sans-serif;">
         Whether you're looking for top talent or hiring support, we're here to help.
       </p>
-      <a href="#contact" class="btn btn-light px-4 py-2 fw-bold" style="font-family: 'Poppins', sans-serif;">Get in Touch</a>
+      <a href="Contact.html" class="btn btn-light px-4 py-2 fw-bold" style="font-family: 'Poppins', sans-serif;">Get in Touch</a>
     </div>
   </section>
   
@@ -286,8 +317,7 @@
     <div class="row gy-5 justify-content-between">
       <!-- Column 1: About -->
       <div class="col-md-3">
-        <h5 class="fw-bold mb-3">Shivaya HR</h5>
-        <p class="small text-white-50">
+<img src="./shivayahr.png" alt="shivayahr logo" style="height: 50px;"/>        <p class="small text-white-50">
           Empowering businesses with top talent through tailored recruitment solutions. We deliver quality, speed, and alignment.
         </p>
       </div>
@@ -339,7 +369,11 @@
   </div>
 </footer>
 
-  
+  <!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
   
     
   <!-- FontAwesome -->
